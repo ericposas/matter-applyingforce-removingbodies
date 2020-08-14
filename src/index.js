@@ -5,8 +5,7 @@ import {
 import * as PIXI from 'pixi.js'
 import random from 'random'
 import { width, height } from './config'
-import { setUpMouseConstraint } from './MatterMouseSetup'
-import { setUpEngineRender } from './MatterEngineRenderSetup'
+import { setUpMouseConstraint, setUpEngineRender } from './MatterBoilerplate'
 import './style.scss'
 
 
