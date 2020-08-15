@@ -5,14 +5,13 @@ import {
 import * as PIXI from 'pixi.js'
 import random from 'random'
 import { width, height } from './config'
-import { setUpMouseConstraint, setUpEngineRender } from './MatterBoilerplate'
+import { matterBoilerplate } from './MatterBoilerplate'
 import './style.scss'
 
 
 window.start = () => {
 
-    let { engine, render, runner, world } = setUpEngineRender()
-		let mouse = setUpMouseConstraint(world, engine, render)
+    let { engine, render, runner, world } = matterBoilerplate()
 
 		let ground = Bodies.rectangle(width/2, height, width, 100, {isStatic:true})
 		// let box = Bodies.rectangle(100, -300, 50, 50)
@@ -63,17 +62,5 @@ window.start = () => {
 			})
 
 		})
-
-    // context for MatterTools.Demo
-    return {
-        engine: engine,
-        runner: runner,
-        render: render,
-        canvas: render.canvas,
-        stop: function() {
-            Matter.Render.stop(render);
-            Matter.Runner.stop(runner);
-        }
-    };
 
 }

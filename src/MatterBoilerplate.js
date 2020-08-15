@@ -1,8 +1,10 @@
-import { Mouse, MouseConstraint, World } from 'matter-js'
-import { Engine, Render, Runner } from 'matter-js'
+import {
+	Mouse, MouseConstraint, World,
+	Engine, Render, Runner
+} from 'matter-js'
 import { width, height } from './config'
 
-export function setUpEngineRender() {
+export function matterBoilerplate() {
 	// create engine
 	var engine = Engine.create()
 	var world = engine.world;
@@ -31,17 +33,6 @@ export function setUpEngineRender() {
 		min: { x: 0, y: 0 }, max: { x: width, y: height }
 	})
 
-	return {
-		engine,
-		render,
-		runner,
-		world
-	}
-
-}
-
-export function setUpMouseConstraint(world, engine, render) {
-	// add mouse control
 	var mouse = Mouse.create(render.canvas),
 			mouseConstraint = MouseConstraint.create(engine, {
 					mouse: mouse,
@@ -58,5 +49,11 @@ export function setUpMouseConstraint(world, engine, render) {
 	// keep the mouse in sync with rendering
 	render.mouse = mouse;
 
-	return mouse
+	return {
+		engine,
+		render,
+		runner,
+		world
+	}
+
 }
