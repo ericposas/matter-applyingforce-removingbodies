@@ -12,8 +12,9 @@ import { matterBoilerplate } from './MatterBoilerplate'
 
 - start a matterjs project after one line, de-structuring the constants/variables that we'll need access to in our main project file, passing in width and height parameters
 ```
-let { engine, render, runner, world } =
-matterBoilerplate(width [int], height [int])
+let {
+	engine, render, runner, world, mouse, mouseConstraint
+} = matterBoilerplate(width [int], height [int])
 ```
 
 - runs all the necessary setup of the engine, render, and runner and abstracts it away from the main file

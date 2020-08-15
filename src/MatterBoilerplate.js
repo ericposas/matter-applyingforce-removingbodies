@@ -52,7 +52,9 @@ export function matterBoilerplate(width, height) {
 		engine,
 		render,
 		runner,
-		world
+		world,
+		mouse,
+		mouseConstraint
 	}
 
 }
