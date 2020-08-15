@@ -18,4 +18,6 @@ import { matterBoilerplate } from './MatterBoilerplate'
 let { engine, render, runner, world } = matterBoilerplate()
 ```
 
+- runs all the necessary setup of the engine, render, and runner and abstracts it away from the main file
+- you can access these important variables via the line above ^^
 - now, you can start adding your physics bodies!
