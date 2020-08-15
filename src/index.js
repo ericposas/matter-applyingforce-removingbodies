@@ -11,7 +11,7 @@ import './style.scss'
 
 window.start = () => {
 
-    let { engine, render, runner, world } = matterBoilerplate()
+    let { engine, render, runner, world } = matterBoilerplate(width, height)
 
 		let ground = Bodies.rectangle(width/2, height, width, 100, {isStatic:true})
 		// let box = Bodies.rectangle(100, -300, 50, 50)

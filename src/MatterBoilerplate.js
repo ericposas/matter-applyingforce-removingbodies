@@ -2,9 +2,8 @@ import {
 	Mouse, MouseConstraint, World,
 	Engine, Render, Runner
 } from 'matter-js'
-import { width, height } from './config'
 
-export function matterBoilerplate() {
+export function matterBoilerplate(width, height) {
 	// create engine
 	var engine = Engine.create()
 	var world = engine.world;

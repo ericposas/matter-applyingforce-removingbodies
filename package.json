@@ -1,6 +1,6 @@
 {
   "name": "matterjs-boilerplate",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "exports a boilerplate that run engine, render, runner setup with mouseconstraint for quickly setting up a project",
   "main": "./src/MatterBoilerplate.js",
   "devDependencies": {
